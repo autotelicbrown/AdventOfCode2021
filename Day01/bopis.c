@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
       ++count;
     prev = cur;
   }
-  printf("Answer: %d\n", count);
+  printf("Answer = %d\n", count);
 
   return 0;
 }

@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     Q.push(val);
   }
 
-  printf("Answer: %d\n", count);
+  printf("Answer = %d\n", count);
 
   return 0;
 }
