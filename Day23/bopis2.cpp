@@ -209,24 +209,6 @@ class ProblemState {
       return tmp;
     }
 
-    bool IsRoomReadyUpToPos(int idx) const {
-      int x, y;
-      MapIdxToPoint(idx, x, y);
-      return IsRoomReadyUpToPos(x, y, idx);
-    }
-
-    bool IsRoomReadyUpToPos(int x, int y) const {
-      int idx = MapPointToIdx(x, y);
-      return IsRoomReadyUpToPos(x, y, idx);
-    }
-
-    bool IsRoomReadyUpToPos(int x, int y, int idx) const {
-      bool tmp = IsCorrectRoom(agents[idx], tiles[idx]);
-      if (y < 5)
-        return (tmp && IsRoomReadyUpToPos(x, y + 1));
-      return tmp;
-    }
-
     std::vector<Path> GetMovementOptions(int root) const {
       int adjx[4] = {-1, 1, 0, 0};
       int adjy[4] = {0, 0, -1, 1};
